@@ -1,0 +1,255 @@
+TRABALHOS NUTEC
+
+#ler o valor informado pelo usuario e calcular o fatorial do número;
+#utilizar uma função para efetuar o calculo;
+#ENTRADA: 3;
+#SAÍDA: 6;
+
+
+def  fatorial(x):
+    aux = 1
+    while x > 0:
+        aux = aux*x
+        x=x-1
+        return aux
+        
+   print(fatorial(3))
+    
+2-   
+def calcular_fatorial_iterativo(n):
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+numero = int(input("Digite um número inteiro: "))
+resultado = calcular_fatorial_iterativo(numero)
+print(f"O fatorial de {numero} é {resultado}")
+
+  
+3-
+ def potencia_recursiva(base, expoente):
+    if expoente == 0:
+        return 1
+    else:
+        return base * potencia_recursiva(base, expoente - 1)
+
+base = float(input("Digite a base: "))
+expoente = int(input("Digite o expoente: "))
+
+resultado = potencia_recursiva(base, expoente)
+print(f"{base} elevado a {expoente} é igual a {resultado}")
+
+
+4-
+ def potencia_recursiva(base, expoente):
+    if expoente == 0:
+        return 1
+    else:
+        return base * potencia_recursiva(base, expoente - 1)
+
+def raiz_recursiva(numero, indice):
+    if indice == 1:
+        return numero
+    else:
+        return numero ** (1 / indice)
+
+base = float(input("Digite a base: "))
+expoente = int(input("Digite o expoente: "))
+indice_raiz = int(input("Digite o índice da raiz: "))
+
+potencia_resultado = potencia_recursiva(base, expoente)
+raiz_resultado = raiz_recursiva(base, indice_raiz)
+
+print(f"{base} elevado a {expoente} é igual a {potencia_resultado}")
+print(f"A raiz {indice_raiz} de {base} é igual a {raiz_resultado}")
+
+
+
+5  calculadora    
+
+import math
+
+def adicao(x, y):
+    return x + y
+
+def subtracao(x, y):
+    return x - y
+
+def multiplicacao(x, y):
+    return x * y
+
+def divisao(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "Erro: Divisão por zero"
+
+def potencia(x, y):
+    return x ** y
+
+def fatorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * fatorial(n - 1)
+
+def raiz_quadrada(x):
+    return math.sqrt(x)
+
+def porcentagem(x, percent):
+    return x * (percent / 100)
+
+def log_base10(x):
+    return math.log10(x)
+
+def log_euler(x):
+    return math.log(x)
+
+print("Calculadora Avançada")
+print("Operações disponíveis:")
+print("1. Adição")
+print("2. Subtração")
+print("3. Multiplicação")
+print("4. Divisão")
+print("5. Potenciação")
+print("6. Fatorial")
+print("7. Raiz Quadrada")
+print("8. Porcentagem")
+print("9. Logaritmo na base 10")
+print("10. Logaritmo na base Euler")
+print("Constantes:")
+print("11. π (pi)")
+print("12. e (número de Euler)")
+
+escolha = int(input("Digite o número da operação desejada: "))
+
+if escolha in [1, 2, 3, 4, 5]:
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+
+if escolha == 1:
+    print("Resultado:", adicao(num1, num2))
+elif escolha == 2:
+    print("Resultado:", subtracao(num1, num2))
+elif escolha == 3:
+    print("Resultado:", multiplicacao(num1, num2))
+elif escolha == 4:
+    print("Resultado:", divisao(num1, num2))
+elif escolha == 5:
+    print("Resultado:", potencia(num1, num2))
+elif escolha == 6:
+    num = int(input("Digite o número para calcular o fatorial: "))
+    print("Resultado:", fatorial(num))
+elif escolha == 7:
+    num = float(input("Digite o número para calcular a raiz quadrada: "))
+    print("Resultado:", raiz_quadrada(num))
+elif escolha == 8:
+    num = float(input("Digite o número: "))
+    percent = float(input("Digite a porcentagem: "))
+    print(f"{percent}% de {num} é {porcentagem(num, percent)}")
+elif escolha == 9:
+    num = float(input("Digite o número para calcular o logaritmo na base 10: "))
+    print("Resultado:", log_base10(num))
+elif escolha == 10:
+    num = float(input("Digite o número para calcular o logaritmo na base Euler: "))
+    print("Resultado:", log_euler(num))
+elif escolha == 11:
+    print("π (pi) =", math.pi)
+elif escolha == 12:
+    print("e (número de Euler) =", math.e)
+else:
+    print("Escolha inválida")
+
+
+
+
+6 -   conversão
+celcius para farenheit (ºc x 9/5) + 32
+celcius para kelvin   ºc + 273,15
+
+farenheit para kelvin  (ºf - 32) + 5/9 + 273,15
+farenheit para celcius  (ºf - 32) + 5/9
+
+kelvein para celcius k - 273,15
+kelvin para farenheit (k - 273,15) x 9/5 + 32
+
+def celcius_farenheit:
+    uhfsieufbbas
+    kfbsbef
+    return temperatura
+
+
+7 -  coversão 
+
+def celsius_to_fahrenheit(celsius):
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+
+def celsius_to_kelvin(celsius):
+    kelvin = celsius + 273.15
+    return kelvin
+
+def fahrenheit_to_kelvin(fahrenheit):
+    kelvin = (fahrenheit - 32) * 5/9 + 273.15
+    return kelvin
+
+def fahrenheit_to_celsius(fahrenheit):
+    celsius = (fahrenheit - 32) * 5/9
+    return celsius
+
+def kelvin_to_celsius(kelvin):
+    celsius = kelvin - 273.15
+    return celsius
+
+def kelvin_to_fahrenheit(kelvin):
+    fahrenheit = (kelvin - 273.15) * 9/5 + 32
+    return fahrenheit
+
+def main():
+    print("Escolha uma opção:")
+    print("1. Celsius para Fahrenheit")
+    print("2. Celsius para Kelvin")
+    print("3. Fahrenheit para Kelvin")
+    print("4. Fahrenheit para Celsius")
+    print("5. Kelvin para Celsius")
+    print("6. Kelvin para Fahrenheit")
+    
+    choice = int(input())
+    temperatura = float(input("Digite a temperatura: "))
+    
+    if choice == 1:
+        resultado = celsius_to_fahrenheit(temperatura)
+        print(f"{temperatura} ºC equivalem a {resultado} ºF.")
+    elif choice == 2:
+        resultado = celsius_to_kelvin(temperatura)
+        print(f"{temperatura} ºC equivalem a {resultado} K.")
+    elif choice == 3:
+        resultado = fahrenheit_to_kelvin(temperatura)
+        print(f"{temperatura} ºF equivalem a {resultado} K.")
+    elif choice == 4:
+        resultado = fahrenheit_to_celsius(temperatura)
+        print(f"{temperatura} ºF equivalem a {resultado} ºC.")
+    elif choice == 5:
+        resultado = kelvin_to_celsius(temperatura)
+        print(f"{temperatura} K equivalem a {resultado} ºC.")
+    elif choice == 6:
+        resultado = kelvin_to_fahrenheit(temperatura)
+        print(f"{temperatura} K equivalem a {resultado} ºF.")
+    else:
+        print("Escolha inválida.")
+
+if __name__ == "__main__":
+    main()
+
+8- bash
+
+#!/bin/bash
+
+echo "Bem-vindo ao mundo das vacas!"
+echo "  \\   ^__^"
+echo "   \\  (oo)\\_______"
+echo "      (__)\\       )\\/\\"
+echo "           ||----w |"
+echo "           ||     ||"
+
